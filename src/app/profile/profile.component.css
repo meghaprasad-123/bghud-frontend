@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+.container{
+    margin-top: 10%;
+}
+
+h1{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin-top: 3%;
+}
+img{
+    width: 100px;
+    height: 87px;
+    margin-top: 7%;
+    margin-left: 348px;
+}
+#empty{
+    width: 354px;
+    margin-left: 191px;
+    height: 295px;
+}
+#emptyhd{
+    font-family: 'Dancing Script', cursive;
+}

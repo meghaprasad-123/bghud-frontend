@@ -1,0 +1,78 @@
+<app-header></app-header>
+
+<div id="heading" class="row">
+    <h1>COURSE REGISTRATION</h1>
+</div>
+
+<div class="container bg-light">
+    <div class="row">
+        <h2 class="reg">Registration</h2><br><br><br><br>
+        <p>For all course enquires, please fill out the form and we’ll get back to you as soon as possible. 
+            We’ll be happy to answer all of your questions and make sure you have a great career ahead.</p>
+
+        <form [formGroup]="regForm" action="" style="margin-top: 3%;">
+            <div class="p-2">
+                <label for=""><strong>Enter your full name</strong></label><br>
+                <input formControlName="uname" type="text" class="form-control">
+            </div>
+            <div class="text-danger" *ngIf="this.regForm.get('uname')?.errors && this.regForm.get('uname')?.touched">&nbsp;Invalid</div>
+
+
+            <div class="p-2">
+                <label for=""><strong>Email id</strong></label><br>
+                <input formControlName="mail" type="email" class="form-control">
+            </div>
+            <div class="text-danger" *ngIf="this.regForm.get('mail')?.errors && this.regForm.get('mail')?.touched">&nbsp;Invalid email</div>
+
+            <div class="p-2">
+                <label for=""><strong>Highest Qualification</strong></label><br>
+                <input formControlName="qual" type="text" class="form-control">
+            </div>
+            <div class="text-danger" *ngIf="this.regForm.get('qual')?.errors && this.regForm.get('qual')?.touched">&nbsp;Invalid</div>
+
+            <div class="p-2">
+                <label for=""><strong>Phone number</strong></label><br>
+                <input formControlName="num" type="text" class="form-control">
+            </div>
+            <div class="text-danger" *ngIf="this.regForm.get('num')?.errors && this.regForm.get('num')?.touched">&nbsp;Invalid number</div>
+
+            <div class="p-2">
+                <label for=""><strong>Place(city/town)</strong></label><br>
+                <input formControlName="loc" type="text" class="form-control">
+            </div>
+            <div class="text-danger" *ngIf="this.regForm.get('loc')?.errors && this.regForm.get('loc')?.touched">&nbsp;Invalid</div>
+
+            <div class="p-2">
+                <label for=""><strong>Course :</strong>&nbsp; (IELTS/OET/TOEFL/PTE/CBT/Eng Fluency/Prometric test/MOH/HAAD/RN-NCLEX) </label>
+                <!-- <select  name="" id="">
+                    <option  value="">IELTS</option>
+                    <option  value="OET">OET</option>
+                    <option  value="TOEFL">TOEFL</option>
+                    <option  value="PTE">PTE</option>
+                    <option  value="CBT">CBT</option>
+                    <option  value="Eng fluency">English Fluency</option>
+                    <option  value="PT">Prometric Test</option>
+                    <option  value="MOH">MOH</option>
+                    <option  value="HAAD">HAAD</option>
+                    <option  value="RN-NCLEX">RN-NCLEX</option>
+                </select><br> -->
+                <input formControlName="crs" type="text" class="form-control" placeholder="choose only one course">
+            </div>
+            <div class="text-danger" *ngIf="this.regForm.get('crs')?.errors && this.regForm.get('crs')?.touched">&nbsp;Invalid</div>
+            <br>
+
+            <!-- <div class="text-danger" *ngIf="this.regForm.get('crs')?.errors && this.regForm.get('crs')?.touched">&nbsp;Invalid</div> -->
+
+            <div class="p-2">
+                <label for=""><strong>Course Mode :</strong></label>&nbsp;
+                <input  formControlName="mod" type="text" placeholder="choose online or offline">
+            </div>
+            <div class="text-danger" *ngIf="this.regForm.get('mod')?.errors && this.regForm.get('mod')?.touched">&nbsp;Invalid</div>
+
+
+            <div class="p-2 text-center">
+                <button type="submit" (click)="registration(profile)" class="btn btn-outline-danger"><strong>Submit</strong></button>
+            </div>
+        </form>
+    </div>
+</div>

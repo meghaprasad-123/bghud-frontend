@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Rowdies&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.ch1{
+    color: red;
+    font-family: 'Rowdies', cursive;
+    font-size: 45px;
+}
+.cl1{
+    color: darkblue;
+    font-size: 25px;
+    font-weight: bold;
+}
+.cl2{
+    color: darkblue;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+#c1{
+    margin-left: 30px; ;
+}
+.cc1{
+    color: antiquewhite;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.hd1{
+    font-family: 'Lora', serif;
+}
+#box1{
+    background-color: darkblue;
+    color: white;
+    border-top-right-radius: 70px ;
+}
+#box1 h2{
+    font-family: 'Lora', serif;
+}
+#box1 button{
+    background-color: red;
+    color: white;
+    width: 100px;
+    height: 35px;
+}
+#box2{
+    background-color:red;
+    color: white;
+    border-top-right-radius: 70px ;
+
+}
+#box2 h2{
+    font-family: 'Lora', serif;
+
+}
+#box2 button{
+    background-color: darkblue;
+    color: white;
+    width: 100px;
+    height: 35px;
+}
+#cert{
+    width:900px ;
+    margin-left: 201px;
+}
+#abt1{
+    width: 500px;
+    height: 600px;
+}
+#abt2{
+    background-color: rgb(95, 7, 163);
+    color: white;
+}
+#abt3{
+    margin-left: 195px;
+    margin-top: 30px;
+}
+.carousel {
+    margin-top: 7%;
+}
+
+
+
+
+@media(max-width:400px){
+    #cert{
+        margin-left: 5px;
+    }
+    #abt1{
+        width: 380px;
+    }
+    #abt3{
+        margin-left: 40px;
+    }
+}
