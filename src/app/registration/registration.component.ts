@@ -31,6 +31,13 @@ mod:['',[Validators.required,Validators.pattern('[a-zA-Z]+')]]
         this.registrations=data.profiles
       }
     )
+    this.api.getprofile().subscribe(data=>{
+      this.profile=data
+      console.log(this.profile);
+      
+    })
+
+
   }
 
   registration(profile:any){
@@ -47,6 +54,7 @@ mod:['',[Validators.required,Validators.pattern('[a-zA-Z]+')]]
     if(this.regForm.valid){
 
       console.log(this.regForm.get('mail')?.errors);
+
 
       this.ds.registration(uname,mail,qual,num,loc,crs,mod)
 

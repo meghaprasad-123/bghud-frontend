@@ -24,6 +24,8 @@ export class ApiService {
       course:profile.course,
       mode:profile.mode
     }
+    console.log(this.registration);
+    
     return this.http.post('http://localhost:3000/registration',body)
   }
 

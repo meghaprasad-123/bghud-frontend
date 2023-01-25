@@ -9,8 +9,8 @@
     </div>
 </div>
 
-<div class="container w-50 bg-light">
-    <div class="row">
+<div class="container w-50 bg-light" >
+    <div class="row"  *ngIf="profile.length!=0" >
 
         
             <img src="./../../assets/profile.webp" alt=""><br><br>
@@ -21,34 +21,36 @@
             <h4><strong>Qualification:   </strong></h4><br><br>
             <h4><strong>Course registered:  </strong></h4><br><br>
             <h4><strong>Course mode:   </strong></h4> -->
-            <div class="col" *ngFor="let profilee of profile">
+            <!-- <div class="col" *ngFor="let profilee of profile"> -->
+                <div class="col" >
+
                 <table class="table border border-dark mt-4 ">
                     <tbody>
-                        <tr>
+                        <tr *ngFor="let profilee of profile">
                             <td><strong>Name of the Student :</strong></td>
                             <td>{{profilee.username}}</td>
                         </tr>
-                        <tr>
+                        <tr *ngFor="let profilee of profile">
                             <td><strong>Email ID :</strong></td>
                             <td>{{profilee.mail}]</td>
                         </tr>
-                        <tr>
+                        <tr *ngFor="let profilee of profile">
                             <td><strong>Qualification :</strong></td>
                             <td>{{profilee.qualification}}</td>
                         </tr>
-                        <tr>
+                        <tr *ngFor="let profilee of profile">
                             <td><strong>Phone No.</strong></td>
                             <td>{{profilee.number}}</td>
                         </tr>
-                        <tr>
+                        <tr *ngFor="let profilee of profile">
                             <td><strong>Student location :</strong></td>
                             <td>{{profilee.place}}</td>
                         </tr>
-                        <tr>
+                        <tr *ngFor="let profilee of profile">
                             <td><strong>Course registered</strong></td>
                             <td>{{profilee.course}}</td>
                         </tr>
-                        <tr>
+                        <tr *ngFor="let profilee of profile">
                             <td><strong>Coursee mode :</strong></td>
                             <td>{{profilee.mode}}</td>
                         </tr>

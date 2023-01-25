@@ -29,8 +29,8 @@ pswd:['',[Validators.pattern('[a-zA-Z0-9\@#*%]+')]]})
      this.ds.login(mail,pswd)
 
      .subscribe((result:any)=>{
-      localStorage.setItem('currentUser',JSON.stringify(result.currentUser));
-      localStorage.setItem('currentAcno',JSON.stringify(result.currentMail));
+      localStorage.setItem('currentMail',JSON.stringify(result.currentMail));
+      localStorage.setItem('currentPassword',JSON.stringify(result.currentPassword));
       localStorage.setItem('token',JSON.stringify(result.token));
 
        alert(result.message);

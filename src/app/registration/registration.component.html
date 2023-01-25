@@ -10,7 +10,7 @@
         <p>For all course enquires, please fill out the form and we’ll get back to you as soon as possible. 
             We’ll be happy to answer all of your questions and make sure you have a great career ahead.</p>
 
-        <form [formGroup]="regForm" action="" style="margin-top: 3%;">
+        <form [formGroup]="regForm" action="" style="margin-top: 3%;" (ngSubmit)="registration(profile)">
             <div class="p-2">
                 <label for=""><strong>Enter your full name</strong></label><br>
                 <input formControlName="uname" type="text" class="form-control">
@@ -71,7 +71,7 @@
 
 
             <div class="p-2 text-center">
-                <button type="submit" (click)="registration(profile)" class="btn btn-outline-danger"><strong>Submit</strong></button>
+                <button type="submit"  class="btn btn-outline-danger"><strong>Submit</strong></button>
             </div>
         </form>
     </div>
