@@ -9,22 +9,9 @@ a{
     width: 100%;
     top: 0px;
 }
-#profile{
-    margin-top: 8px;
-    margin-left: 700px;
-    background-color: grey;
-    width: 38px;
-    height: 34px;
-    border-radius: 20px;
-    border: none;
-}
-#profile:hover{
-    background-color: white;
-    color: black;
-}
 #btn{
     margin-top: 8px;
-    margin-left: 25px;
+    margin-left: 783px;
     border: none;
     height: 34px;
     background-color: navy;
@@ -41,9 +28,9 @@ a{
 }
 
 @media(max-width:420px){
-    #profile{
+    /* #profile{
         margin-left: 8px;
-    }
+    } */
     #btn{
         margin-left: 10px;
     }

@@ -10,12 +10,12 @@
                 <div class="p-2">
                     <input formControlName="uname" type="text" placeholder="Enter your name" class="form-control">
                 </div>
-                <div class="text-danger" *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched">&nbsp;Invalid</div>
+                <div class="text-danger" *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched">&nbsp; <p class="text-danger">*Required field</p> </div>
 
                 <div class="p-2">
                     <input formControlName="mail" type="email" placeholder="Enter email id" class="form-control">
                 </div>
-                <div class="text-danger" *ngIf="this.registerForm.get('mail')?.errors && this.registerForm.get('mail')?.touched">&nbsp;Invalid email</div>
+                <div class="text-danger" *ngIf="this.registerForm.get('mail')?.errors && this.registerForm.get('mail')?.touched">&nbsp;<p class="text-danger">*Required field</p></div>
 
                 <div class="p-2">
                     <input formControlName="num" type="text" placeholder="Mobile number (optional)" class="form-control">
@@ -25,7 +25,7 @@
                 <div class="p-2">
                     <input formControlName="pswd" type="password" placeholder="Create a new password" class="form-control">
                 </div>
-                <div class="text-danger" *ngIf="this.registerForm.get('pswd')?.errors && this.registerForm.get('pswd')?.touched">&nbsp;Invalid password</div>
+                <div class="text-danger" *ngIf="this.registerForm.get('pswd')?.errors && this.registerForm.get('pswd')?.touched">&nbsp;<p class="text-danger">*Required field</p></div>
                 <br>
                 <div class="text-center">
                     <button type="submit" class="btn btn-outline-dark">Register Now</button>

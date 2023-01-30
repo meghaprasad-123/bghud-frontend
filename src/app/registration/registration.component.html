@@ -10,9 +10,15 @@
         <p>For all course enquires, please fill out the form and we’ll get back to you as soon as possible. 
             We’ll be happy to answer all of your questions and make sure you have a great career ahead.</p>
 
-        <form [formGroup]="regForm" action="" style="margin-top: 3%;" (ngSubmit)="registration(profile)">
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Register First!</strong> Then take an appointment to meet with us.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+        <form [formGroup]="regForm" action="" style="margin-top: 3%;" (ngSubmit)="registration()">
             <div class="p-2">
-                <label for=""><strong>Enter your full name</strong></label><br>
+                <label for=""><strong>Enter your name </strong></label><br>
                 <input formControlName="uname" type="text" class="form-control">
             </div>
             <div class="text-danger" *ngIf="this.regForm.get('uname')?.errors && this.regForm.get('uname')?.touched">&nbsp;Invalid</div>
@@ -44,18 +50,6 @@
 
             <div class="p-2">
                 <label for=""><strong>Course :</strong>&nbsp; (IELTS/OET/TOEFL/PTE/CBT/Eng Fluency/Prometric test/MOH/HAAD/RN-NCLEX) </label>
-                <!-- <select  name="" id="">
-                    <option  value="">IELTS</option>
-                    <option  value="OET">OET</option>
-                    <option  value="TOEFL">TOEFL</option>
-                    <option  value="PTE">PTE</option>
-                    <option  value="CBT">CBT</option>
-                    <option  value="Eng fluency">English Fluency</option>
-                    <option  value="PT">Prometric Test</option>
-                    <option  value="MOH">MOH</option>
-                    <option  value="HAAD">HAAD</option>
-                    <option  value="RN-NCLEX">RN-NCLEX</option>
-                </select><br> -->
                 <input formControlName="crs" type="text" class="form-control" placeholder="choose only one course">
             </div>
             <div class="text-danger" *ngIf="this.regForm.get('crs')?.errors && this.regForm.get('crs')?.touched">&nbsp;Invalid</div>
@@ -71,8 +65,63 @@
 
 
             <div class="p-2 text-center">
-                <button type="submit"  class="btn btn-outline-danger"><strong>Submit</strong></button>
-            </div>
+                <button type="submit"  class="btn btn-outline-success"><strong>Register</strong></button>
+            </div><br><br><br>
+
+            
+
+            
+
+ <!-- Button trigger modal -->
+<button id="modb" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Book for an appointment
+  </button><br><br>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Booking is avaliable here</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        
+        <div class="modal-body">
+          <form action="" [formGroup]="bookForm">
+            <label for="">Name of the candidate </label><br>
+            <input formControlName="name" type="text" class="form-control"><br>
+            <div class="text-danger" *ngIf="this.bookForm.get('name')?.errors && this.bookForm.get('name')?.touched">&nbsp;Invalid</div>
+
+
+            <label for="">Location of Institute</label><br>
+            <input formControlName="location" type="text" class="form-control"><br>
+            <div class="text-danger" *ngIf="this.bookForm.get('location')?.errors && this.bookForm.get('location')?.touched">&nbsp;Invalid</div>
+
+            <label for="">Date for appointment</label><br>
+            <input formControlName="date" type="date" min="{{minDate}}" class="form-control"><br>
+            <div class="text-danger" *ngIf="this.bookForm.get('date')?.errors && this.bookForm.get('date')?.touched">&nbsp;Invalid</div>
+
+            <input formControlName="tym" type="time" class="form-control"><br>
+            <div class="text-danger" *ngIf="this.bookForm.get('tym')?.errors && this.bookForm.get('tym')?.touched">&nbsp;Invalid</div>
+
+            <label for="">Contact number</label><br>
+            <input formControlName="number" type="text" class="form-control">
+            <div class="text-danger" *ngIf="this.bookForm.get('number')?.errors && this.bookForm.get('number')?.touched">&nbsp;Invalid</div>
+
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button (click)="book()" type="submit" class="btn btn-primary">Save </button>
+        </div>
+      </div>
+    </div>
+  </div>
         </form>
+  
+
+
     </div>
 </div>

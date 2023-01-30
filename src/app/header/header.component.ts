@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +7,17 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  constructor(private ds:DataService ) { }
+  constructor( private router:Router) { }
 
   ngOnInit(): void {
   }
 
-  
+  logout(){
+    localStorage.removeItem('currentMail')
+    localStorage.removeItem('currentPassword')
+    localStorage.removeItem('token')
+
+    alert('Logout successfully')
+    this.router.navigateByUrl('')
+  }
 }

@@ -10,12 +10,19 @@ import { DataService } from '../services/data.service';
 })
 export class LoginComponent implements OnInit {
 
+
   constructor(private fb:FormBuilder,private ds:DataService,private router:Router) { }
 
   loginForm=this.fb.group({mail:['',[Validators.required,Validators.pattern('[a-zA-Z1-9\@.]+')]],
 pswd:['',[Validators.pattern('[a-zA-Z0-9\@#*%]+')]]})
 
   ngOnInit(): void {
+
+    // if(!localStorage.getItem('currentMail')){
+    //   alert('Login first')
+    //   this.router.navigateByUrl('')
+
+    // }
   }
 
   login(){

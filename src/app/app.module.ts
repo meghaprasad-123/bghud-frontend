@@ -10,7 +10,6 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { CoursesComponent } from './courses/courses.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -25,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     CoursesComponent,
     RegistrationComponent,
-    ProfileComponent
+    
   ],
   imports: [
     BrowserModule,
